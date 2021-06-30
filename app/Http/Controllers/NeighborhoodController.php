@@ -60,7 +60,7 @@ class NeighborhoodController extends Controller
             return $this->msgMissingRequest($request);
 
         $phrase = phonetics($request->neighborhood);
-        $duplicatedNeighborhood  = $this->Neighborhood->selectRaw($this->fields)
+        $duplicatedNeighborhood  = $this->Neighborhood->selectRaw($this->Fields)
                                                        ->where('fneighborhood', $phrase)
                                                        ->first();
 
@@ -135,7 +135,7 @@ class NeighborhoodController extends Controller
 
         if (($request->has('neighborhood')) && ($request->neighborhood <> '')) {
             $phrase = phonetics($request->neighborhood);
-            $duplicatedNeighborhood = $this->Neighborhood->selectRaw($this->fields)
+            $duplicatedNeighborhood = $this->Neighborhood->selectRaw($this->Fields)
                                            ->where('fneighborhood', $phrase)
                                            ->first();
 

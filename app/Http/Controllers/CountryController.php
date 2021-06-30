@@ -34,7 +34,7 @@ class CountryController extends Controller
     {
         return response()->json(
             DB::table('countries')
-              ->select($this->fields)
+              ->select($this->Fields)
               ->get()
               ->toArray()
         );

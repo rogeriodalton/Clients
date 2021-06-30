@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Api\ApiWarning;
-use Illuminate\Http\Request;
-
 class ApiWarningController extends Controller
 {
     /**
@@ -13,7 +10,7 @@ class ApiWarningController extends Controller
      * @param  App\Http\Controllers\ApiWarning  $ApiWarning
      * @return \Illuminate\Http\Response
      */
-    public function warning(ApiWarning $apiWarning)
+    public function warning()
     {
         return response()->json(['message' => 'Atenção: O ID alvo para essa requisição não foi informado.']);
     }
@@ -24,7 +21,7 @@ class ApiWarningController extends Controller
      * @param  App\Http\Controllers\ApiWarning  $ApiWarning
      * @return \Illuminate\Http\Response
      */
-    public function noAccess(ApiWarning $apiWarning)
+    public function noAccess()
     {
         return response()->json(['message' => 'Atenção: Requisição não autorizada.']);
     }
