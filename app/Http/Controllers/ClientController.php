@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Api\Client;
 use Illuminate\Http\Request;
-use App\Http\Traits\MessageTrait;
 use Illuminate\Support\Facades\{
     Validator, Hash, DB
 };
 
 class ClientController extends Controller
 {
-    use MessageTrait;
-
     private $Client;
 
     private $Fields = [

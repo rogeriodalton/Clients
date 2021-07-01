@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Api\State;
 use Illuminate\Http\Request;
-use App\Http\Traits\MessageTrait;
 use Illuminate\Support\Facades\{
     Validator, DB
 };
 
 class StateController extends Controller
 {
-    use MessageTrait;
-
     private $State;
 
     private $Fields = [
